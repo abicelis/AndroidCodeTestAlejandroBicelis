@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_add_random_contacts_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:textColor="?primary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/dialog_add_random_contacts_title"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="?primary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/dialog_add_random_contacts_subtitle"
+            />
+
+        <FrameLayout
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            >
+            <LinearLayout
+                android:id="@+id/dialog_add_random_contacts_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="?primary_text"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/dialog_add_random_contacts_text_1"/>
+                <Spinner
+                    android:id="@+id/dialog_add_random_contacts_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="?primary_text"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/dialog_add_random_contacts_text_2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialog_add_random_contacts_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:id="@+id/dialog_add_random_contacts_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="?primary_text"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/dialog_add_random_contacts_text_3"/>
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:indeterminateOnly="true"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dialog_add_random_contacts_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingBottom="8dp"
+        android:paddingEnd="8dp"
+        >
+        <Button
+            android:id="@+id/dialog_add_random_contacts_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_cancel"
+            android:layout_alignParentEnd="true"
+            style="?attr/borderlessButtonStyle"/>
+        <Button
+            android:id="@+id/dialog_add_random_contacts_fetch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_fetch"
+            android:layout_toStartOf="@id/dialog_add_random_contacts_cancel"
+            style="?attr/borderlessButtonStyle"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

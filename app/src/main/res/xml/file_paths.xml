@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--<cache-path name="temp_cache" path="data/user/0/ve.com.abicelis.androidcodetestalejandrobicelis/cache/image"/>-->
+    <cache-path name="temp_cache" path="image/"/>
+</paths>

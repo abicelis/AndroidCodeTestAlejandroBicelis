@@ -1,0 +1,152 @@
+<resources>
+    <!--Misc-->
+    <string name="app_name">Android Code Test Alejandro Bicelis</string>
+    <string name="loading">Loading&#8230;</string>
+
+
+    <!--Activity image edit-->
+    <!--Dialog select image source-->
+    <string name="dialog_select_image_source_title">Select source</string>
+    <string name="dialog_select_image_source_camera">Camera</string>
+    <string name="dialog_select_image_source_gallery">Gallery</string>
+
+
+    <!--Activity contact edit-->
+    <string name="activity_contact_edit_toolbar_title_new">New contact</string>
+    <string name="activity_contact_edit_toolbar_title_edit">Edit contact</string>
+
+    <string name="activity_contact_edit_menu_save">Save</string>
+
+    <string name="activity_contact_edit_title_basic">BASIC</string>
+    <string name="activity_contact_edit_title_phone_numbers">PHONE NUMBER</string>
+    <string name="activity_contact_edit_title_emails">EMAIL</string>
+    <string name="activity_contact_edit_title_addresses">ADDRESS</string>
+
+    <string name="activity_contact_edit_hint_first_name">First name</string>
+    <string name="activity_contact_edit_hint_last_name">Last name</string>
+    <string name="activity_contact_edit_hint_dob">Date of birth</string>
+
+
+    <!--Dialog discard contact-->
+    <string name="dialog_contact_edit_discard_title">Discard changes</string>
+    <string name="dialog_contact_edit_discard_message">Are you sure you want to discard the changes?</string>
+
+    <!--Dialog Add Phone-->
+    <string name="dialog_add_phone_title">Add a phone number</string>
+    <string name="dialog_add_phone_title_edit">Edit phone number</string>
+    <string name="dialog_add_phone_hint">Phone number</string>
+    <!--Dialog Add Email-->
+    <string name="dialog_add_email_title">Add an email</string>
+    <string name="dialog_add_email_title_edit">Edit email</string>
+    <string name="dialog_add_email_hint">Email</string>
+
+    <!--Dialog Add Address-->
+    <string name="dialog_add_address_title">Add an address</string>
+    <string name="dialog_add_address_title_edit">Edit address</string>
+    <string name="dialog_add_address_street">Street</string>
+    <string name="dialog_add_address_city">City</string>
+    <string name="dialog_add_address_country">Country</string>
+    <string name="dialog_add_address_postal_code">Postal code</string>
+
+
+
+
+
+
+
+    <!--Activity contact detail-->
+    <string name="activity_contact_detail_share">Share</string>
+    <string name="activity_contact_detail_edit">Edit</string>
+    <string name="activity_contact_detail_delete">Delete</string>
+
+    <!--Dialog delete contact-->
+    <string name="dialog_contact_detail_delete_title">Delete contact</string>
+    <string name="dialog_contact_detail_delete_message">Are you sure you want to delete \'%1$s\'?</string>
+
+
+
+
+    <!--Home activity-->
+    <string name="activity_home_search_hint">Search&#8230;</string>
+    <string name="activity_home_title">Contacts</string>
+
+    <string name="activity_home_menu_theme">Switch theme</string>
+    <string name="activity_home_menu_sort">Sort</string>
+    <string name="activity_home_menu_search">Search</string>
+    <string name="activity_home_menu_about">About</string>
+
+    <string name="activity_home_no_items_title">Welcome to Contacts</string>
+    <string name="activity_home_no_items_subtitle">Add a contact by clicking the + button</string>
+
+
+    <!--Dialog Add Random Users-->
+    <string name="dialog_add_random_contacts_title">Fetch contacts</string>
+    <string name="dialog_add_random_contacts_subtitle">From randomuser.me API</string>
+    <string name="dialog_add_random_contacts_text_1">Fetch</string>
+    <string name="dialog_add_random_contacts_text_2">random contacts</string>
+    <string name="dialog_add_random_contacts_text_3">Fetching contacts&#8230;</string>
+    <string name="dialog_add_random_contacts_text_4">Saving contacts&#8230;</string>
+
+
+    <!--MESSAGES-->
+    <string name="error_loading_contacts">Sorry, error loading contacts</string>
+    <string name="error_invalid_contact">Sorry, invalid contact</string>
+    <string name="error_saving_contacts">Sorry, error saving contacts</string>
+    <string name="error_saving_contact">Sorry, error saving contact</string>
+    <string name="error_fetching_contacts">Sorry, error fetching contacts</string>
+    <string name="error_deleting_contact">Sorry, error deleting contact</string>
+    <string name="error_permissions_not_granted">Camera and Storage permissions needed to take pictures</string>
+    <string name="error_no_camera_installed">No camera app installed on device</string>
+    <string name="error_requesting_camera">Unexpected error requesting camera</string>
+    <string name="error_requesting_image_gallery">Unexpected error requesting image from gallery</string>
+    <string name="error_creating_image">Unexpected error creating image</string>
+    <string name="error_saving_image">Unexpected error saving the image</string>
+    <string name="error_checking_contact_invalid_first_name">Please enter a valid first name</string>
+    <string name="error_checking_contact_invalid_last_name">Please enter a valid last name</string>
+    <string name="error_checking_contact_invalid_dob">Please enter a valid date of birth</string>
+    <string name="error_checking_contact_no_phones">Please add at least one phone number</string>
+    <string name="error_checking_contact_no_emails">Please add at least one email</string>
+    <string name="error_checking_phone_invalid_number">Please enter a valid phone number</string>
+    <string name="error_checking_email_invalid_email">Please enter a valid email</string>
+    <string name="error_checking_address_invalid_street">Please enter a valid street</string>
+    <string name="error_checking_address_invalid_city">Please enter a valid city</string>
+    <string name="error_checking_address_invalid_country">Please enter a valid country</string>
+    <string name="error_checking_address_invalid_postal_code">Please enter a valid postal code</string>
+    <string name="info_app_theme_toggle_message">Toggling %1$s theme</string>
+    <string name="notice_address_copied_clipboard">Address copied to clipboard</string>
+    <string name="success_saving_image">Image saved successfully</string>
+    <string name="info_contact_sort_toggle_message">Sorting by %1$s</string>
+
+
+
+
+    <!--ENUM APP THEME TYPE-->
+    <string name="app_theme_type_light">Light</string>
+    <string name="app_theme_type_dark">Dark</string>
+
+    <!--ENUM ATTACHMENT TYPE-->
+    <string name="attachment_type_home">Home</string>
+    <string name="attachment_type_work">Work</string>
+    <string name="attachment_type_other">Other</string>
+
+    <!--CONTACT SORT TYPE-->
+    <string name="contact_sort_type_first_name">First name</string>
+    <string name="contact_sort_type_last_name">Last name</string>
+
+
+    <!-- DIALOG -->
+    <string name="dialog_cancel">CANCEL</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_add">ADD</string>
+    <string name="dialog_edit">EDIT</string>
+    <string name="dialog_fetch">FETCH</string>
+    <string name="dialog_done">DONE</string>
+    <string name="dialog_set">SET</string>
+    <string name="dialog_agree">AGREE</string>
+    <string name="dialog_skip">SKIP</string>
+    <string name="dialog_yes">YES</string>
+    <string name="dialog_no">NO</string>
+    <string name="dialog_discard">DISCARD</string>
+    <string name="dialog_delete">DELETE</string>
+    <string name="dialog_save">SAVE</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--COLORS FOR THEMES-->
+    <attr name="primary" format="reference|color" />
+    <attr name="primary_dark" format="reference|color" />
+    <attr name="primary_light" format="reference|color" />
+    <attr name="accent" format="reference|color" />
+    <attr name="primary_text" format="reference|color" />
+    <attr name="secondary_text" format="reference|color" />
+    <attr name="hint_text" format="reference|color" />
+    <attr name="white_text" format="reference|color" />
+    <attr name="icons" format="reference|color" />
+    <attr name="horizontal_divider" format="reference|color" />
+    <attr name="highlight_background" format="reference|color" />
+    <attr name="darky_background" format="reference|color" />
+
+
+
+    <!--ATTRIBUTES FOR CUSTOM VIEWS-->
+    <declare-styleable name="common">
+        <attr name="icon" format="reference" />
+        <attr name="text" format="reference" />
+        <attr name="hint" format="reference" />
+        <attr name="maxlines" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="custom_text_view_title" parent="common">
+        <attr name="text"/>
+        <attr name="icon"/>
+    </declare-styleable>
+
+    <declare-styleable name="custom_edit_text" parent="common">
+        <attr name="hint"/>
+        <attr name="text"/>
+        <attr name="icon"/>
+        <attr name="maxlines"/>
+    </declare-styleable>
+
+    <declare-styleable name="custom_spinner" parent="common">
+        <attr name="icon"/>
+    </declare-styleable>
+
+</resources>

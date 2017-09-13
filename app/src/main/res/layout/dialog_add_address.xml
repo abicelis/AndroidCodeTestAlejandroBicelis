@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_add_address_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?darky_background"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        >
+        <TextView
+            android:id="@+id/dialog_add_address_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:textColor="?primary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/dialog_add_address_title"
+            />
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="vertical"
+            >
+
+            <ve.com.abicelis.androidcodetestalejandrobicelis.customviews.CustomEditText
+                android:id="@+id/dialog_add_address_street"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:hint="@string/dialog_add_address_street"
+                custom:maxlines="1"/>
+
+            <ve.com.abicelis.androidcodetestalejandrobicelis.customviews.CustomEditText
+                android:id="@+id/dialog_add_address_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                custom:hint="@string/dialog_add_address_city"
+                custom:maxlines="1"/>
+
+            <ve.com.abicelis.androidcodetestalejandrobicelis.customviews.CustomEditText
+                android:id="@+id/dialog_add_address_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                custom:hint="@string/dialog_add_address_country"
+                custom:maxlines="1"/>
+
+
+            <ve.com.abicelis.androidcodetestalejandrobicelis.customviews.CustomEditText
+                android:id="@+id/dialog_add_address_postal_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                custom:hint="@string/dialog_add_address_postal_code"
+                custom:maxlines="1"/>
+
+
+            <ve.com.abicelis.androidcodetestalejandrobicelis.customviews.CustomSpinner
+                android:id="@+id/dialog_add_address_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dialog_add_address_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingBottom="8dp"
+        android:paddingEnd="8dp"
+        >
+        <Button
+            android:id="@+id/dialog_add_address_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_cancel"
+            android:layout_alignParentEnd="true"
+            style="?attr/borderlessButtonStyle"/>
+        <Button
+            android:id="@+id/dialog_add_address_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_add"
+            android:layout_toStartOf="@id/dialog_add_address_cancel"
+            style="?attr/borderlessButtonStyle"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

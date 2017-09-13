@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_edit_two_rows_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/round_edges_background_darky">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="12dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/list_item_edit_two_rows_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:textColor="?primary_text"/>
+        <TextView
+            android:id="@+id/list_item_edit_two_rows_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:fontFamily="sans-serif-light"
+            android:textColor="?secondary_text"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/list_item_edit_two_rows_delete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/circle_background_primary">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_delete"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/list_item_edit_two_rows_drag_handle"
+        android:layout_width="24dp"
+        android:layout_height="56dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:tint="?horizontal_divider"
+        android:src="@drawable/ic_drag_handle_vertical"
+        />
+
+</RelativeLayout>

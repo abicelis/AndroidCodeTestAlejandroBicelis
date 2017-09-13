@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_contact_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+    <FrameLayout
+        android:id="@+id/list_item_contact_image_container"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_margin="6dp"
+        >
+        <ImageView
+            android:id="@+id/list_item_contact_image_no_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_person_large"
+            android:tint="?icons"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/list_item_contact_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </FrameLayout>
+
+
+
+
+    <FrameLayout
+        android:id="@+id/list_item_contact_address"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="22dp"
+        android:visibility="visible"
+        android:background="@drawable/circle_background">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:tint="?white_text"
+            android:src="@drawable/ic_location"/>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/list_item_contact_image_container"
+        android:layout_toStartOf="@+id/list_item_contact_address"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/list_item_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="?primary_text"/>
+        <TextView
+            android:id="@+id/list_item_contact_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:textColor="?secondary_text"/>
+    </LinearLayout>
+</RelativeLayout>
+
