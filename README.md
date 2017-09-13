@@ -41,7 +41,7 @@ Other features:
 ## APK
 
 I won't upload this to the Google Play store as this project is only a code test.
-You can grab the signed apk from [here](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/Android%20Code%20Test%20Alejandro%20Bicelis.apk) instead
+You can grab the signed apk from [this](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/releases/tag/v1.0) release
 
 
 ## Code dependencies
