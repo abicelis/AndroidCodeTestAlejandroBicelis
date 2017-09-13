@@ -38,6 +38,12 @@ Other features:
 [ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/8.jpg) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/8.png)
 
 
+## APK
+
+I won't upload this to the Google Play store as this project is only a code test.
+You can grab the signed apk from [here](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/Android%20Code%20Test%20Alejandro%20Bicelis.apk) instead
+
+
 ## Code dependencies
 
 This Project uses external dependencies and SDK's
