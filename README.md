@@ -3,8 +3,6 @@
 Uploading this here for archival reasons.
 This is a small test app which consists of a list of editable contacts.
 
-
-
 Contact fields:
 - First/last name
 - Image
@@ -13,30 +11,31 @@ Contact fields:
 - Emails
 - Addresses
 
+Other features:
+- Contact image (which you can resize, crop, rotate, add from gallery or camera)
+- Contact phone/email/address type (e.g Home Phone, Work Email)
+- Integration with randomuser.me REST API for quick testing of randomized contacts!
+- The ability to share a contact.
+- Integration with device's dialer app / email app.
+- Contact sorting by first or last name
+- App dark/light theme
+- Custom views: CustomEditText, CustomSpinner.
+
 
 <!----
 <a target="_blank" href='https://play.google.com/store/apps/details?id=ve.com.abicelis.chefbuddy&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="240px"/></a>
 --->
+
 ## Screenshots
 
-
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/nexus5X/thumbs/1%20chef%20buddy%20home.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/play_store/screens/v1.0/nexus5X/1%20chef%20buddy%20home.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/nexus5X/thumbs/2%20spinwheel%20start.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/play_store/screens/v1.0/nexus5X/2%20spinwheel%20start.png.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/nexus5X/thumbs/3%20recipe%20detail.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/play_store/screens/v1.0/nexus5X/3%20recipe%20detail.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/nexus5X/thumbs/4%20recipe%20search.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/play_store/screens/v1.0/nexus5X/4%20recipe%20search.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/nexus5X/thumbs/5%20ingredient%20add.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/play_store/screens/v1.0/nexus5X/5%20ingredient%20add.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/nexus5X/thumbs/6%20image%20edit.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/play_store/screens/v1.0/nexus5X/6%20image%20edit.png)
-
-
-
-## Skills learnt while building the app 
-- MVP: Model View Presenter with configuration change survival
-- New fancy MVP+RxJava+DataLayer architecture, loosely based on [ribot-boilerplate](https://github.com/ribot/android-boilerplate)
-- RxJava 2 and Rx Android!
-- Java lambdas (retrolambda)
-- Retrofit
-- Dagger 2
-- Room database
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/1.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/1.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/2.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/2.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/3.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/3.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/4.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/4.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/5.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/5.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/6.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/6.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/7.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/7.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/8.png) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/8.png)
 
 
 ## Code dependencies
@@ -71,7 +70,6 @@ This Project uses external dependencies and SDK's
 - Large icons. Size 48dp, padding 2dp.
 
 
-
 ## Software used
 
 * [Android Studio 2.3.3 IDE](https://developer.android.com/studio/index.html) - Android IDE
@@ -86,4 +84,3 @@ This Project uses external dependencies and SDK's
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/LICENSE) file for details
-
