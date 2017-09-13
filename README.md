@@ -28,14 +28,14 @@ Other features:
 
 ## Screenshots
 
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/1.jpg) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/1.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/2.jpg) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/2.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/3.jpg) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/3.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/4.jpg) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/4.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/5.jpg) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/5.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/6.jpg) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/6.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/7.jpg) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/7.png)
-[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/8.jpg) ](https://github.com/abicelis/ChefBuddy/blob/master/graphics/screens/v1.0/8.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/1.jpg) ](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/1.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/2.jpg) ](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/2.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/3.jpg) ](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/3.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/4.jpg) ](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/4.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/5.jpg) ](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/5.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/6.jpg) ](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/6.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/7.jpg) ](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/7.png)
+[ ![](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/thumbs/8.jpg) ](https://github.com/abicelis/AndroidCodeTestAlejandroBicelis/blob/master/graphics/screens/v1.0/8.png)
 
 
 ## APK
