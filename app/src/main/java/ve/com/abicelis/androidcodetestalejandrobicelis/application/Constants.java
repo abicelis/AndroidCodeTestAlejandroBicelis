@@ -59,7 +59,6 @@ public class Constants {
 
 
     /* RANDOM USER API */
-    public static final String RANDOMUSER_BASE_URL = "https://randomuser.me/api/";
-    public static final int    RANDOMUSER_DEFAULT_USER_COUNT = 10;
+    public static final String RANDOMUSER_BASE_URL = "https://randomuser.me/api/1.2/";      //Added /1.2/ to prevent app breaking if RandomUser.me decides to change stuff again.
 
 }
