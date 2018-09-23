@@ -29,7 +29,7 @@ public class AddRandomContactsPresenter extends BasePresenter<AddRandomContactsM
 
     public void insertRandomContacts() {
         getMvpView().updateDialogState(AddRandomContactsDialogFragment.DialogState.STATE_FETCHING);
-        mDataManager.getRandomContacts(mAmount)
+        addDisposable(mDataManager.getRandomContacts(mAmount)
                 .delay(200, TimeUnit.MILLISECONDS)          //To see the effect
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -52,6 +52,6 @@ public class AddRandomContactsPresenter extends BasePresenter<AddRandomContactsM
                     getMvpView().showMessage(Message.ERROR_FETCHING_CONTACTS, null);
                     getMvpView().updateDialogState(AddRandomContactsDialogFragment.DialogState.STATE_IDLE);
                     //TODO reset view or send a callable and then kill dialog.. or something
-                });
+                }));
     }
 }

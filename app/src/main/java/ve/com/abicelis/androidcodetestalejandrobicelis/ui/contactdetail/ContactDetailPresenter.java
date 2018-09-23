@@ -26,7 +26,7 @@ public class ContactDetailPresenter extends BasePresenter<ContactDetailMvpView> 
 
     public void getContact(long contactId) {
         mContactId = contactId;
-        mDataManager.getContact(contactId)
+        addDisposable(mDataManager.getContact(contactId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(contact -> {
@@ -35,11 +35,11 @@ public class ContactDetailPresenter extends BasePresenter<ContactDetailMvpView> 
                 }, throwable -> {
                     Timber.e(throwable, "Failed to load contact. ID=%d", contactId);
                    getMvpView().showMessage(Message.ERROR_INVALID_CONTACT, null);
-                });
+                }));
     }
 
     public void reloadContact(){
-        mDataManager.getContact(mContactId)
+        addDisposable(mDataManager.getContact(mContactId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(contact -> {
@@ -48,11 +48,11 @@ public class ContactDetailPresenter extends BasePresenter<ContactDetailMvpView> 
                 }, throwable -> {
                     Timber.e(throwable, "Failed to load contact. ID=%d", mContactId);
                     getMvpView().showMessage(Message.ERROR_INVALID_CONTACT, null);
-                });
+                }));
     }
 
     public void deleteContact() {
-        mDataManager.deleteContact(mContact)
+        addDisposable(mDataManager.deleteContact(mContact)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(() -> {
@@ -60,7 +60,7 @@ public class ContactDetailPresenter extends BasePresenter<ContactDetailMvpView> 
                 }, throwable -> {
                     Timber.e(throwable, "Error deleting contact");
                     getMvpView().showMessage(Message.ERROR_DELETING_CONTACT, null);
-                });
+                }));
     }
 
     public Contact getLoadedContact() {

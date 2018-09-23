@@ -35,7 +35,7 @@ public class ContactEditPresenter extends BasePresenter<ContactEditMvpView> {
         linkAdaptersToContact();
     }
     public void setExisting(long contactId){
-        mDataManager.getContact(contactId)
+        addDisposable(mDataManager.getContact(contactId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(contact -> {
@@ -46,7 +46,7 @@ public class ContactEditPresenter extends BasePresenter<ContactEditMvpView> {
                 }, throwable -> {
                     Timber.e(throwable, "Error getting contact from db, invalid? ID=%d", contactId);
                     getMvpView().showMessage(Message.ERROR_INVALID_CONTACT, null);
-                });
+                }));
     }
 
     public void creatingNew(){
@@ -89,7 +89,7 @@ public class ContactEditPresenter extends BasePresenter<ContactEditMvpView> {
 
         Message message = checkContact();
         if(message == null) {
-            mDataManager.saveContact(mContact)
+            addDisposable(mDataManager.saveContact(mContact)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(() -> {
@@ -97,7 +97,7 @@ public class ContactEditPresenter extends BasePresenter<ContactEditMvpView> {
                     }, throwable -> {
                         Timber.e(throwable, "Error saving contact");
                         getMvpView().showMessage(Message.ERROR_SAVING_CONTACTS, null);
-                    });
+                    }));
 
         } else {
             getMvpView().showMessage(message, null);
