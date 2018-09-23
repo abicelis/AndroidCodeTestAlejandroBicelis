@@ -1,17 +1,21 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'    //For Retrolambda, must be last plugin
 
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion rootProject.buildToolsVersion
+    compileSdkVersion 27
     defaultConfig {
         applicationId "ve.com.abicelis.androidcodetestalejandrobicelis"
         minSdkVersion 19
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
     }
     buildTypes {
         release {
@@ -28,66 +32,65 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    testCompile 'junit:junit:4.12'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-
     //Dagger 2
-    compile 'com.google.dagger:dagger:' + rootProject.daggerVersion;
-    annotationProcessor 'com.google.dagger:dagger-compiler:' + rootProject.daggerVersion;
+    implementation 'com.google.dagger:dagger:2.13'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.13'
 
     // Butterknife
-    compile 'com.jakewharton:butterknife:' + rootProject.butterknifeVersion;
-    annotationProcessor 'com.jakewharton:butterknife-compiler:' + rootProject.butterknifeVersion;
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     //Timber
-    compile 'com.jakewharton.timber:timber:' + rootProject.timberVersion;
+    implementation 'com.jakewharton.timber:timber:4.6.0'
 
     //Retrofit
-    compile 'com.squareup.retrofit2:retrofit:' + rootProject.retrofitVersion;
-    compile 'com.squareup.retrofit2:converter-gson:' + rootProject.retrofitVersion;
-    compile 'com.squareup.retrofit2:converter-scalars:' + rootProject.retrofitVersion;
-    compile 'com.squareup.retrofit2:adapter-rxjava2:' + rootProject.retrofitVersion;
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
 
     //RxJava 2
-    compile 'io.reactivex.rxjava2:rxjava:' + rootProject.rxJavaVersion;
-    compile 'io.reactivex.rxjava2:rxandroid:' + rootProject.rxAndroidVersion;
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.7'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
 
     //Room DB
-    compile 'android.arch.persistence.room:runtime:' + rootProject.roomVersion;
-    compile 'android.arch.persistence.room:rxjava2:' + rootProject.roomVersion;
-    annotationProcessor 'android.arch.persistence.room:compiler:' + rootProject.roomVersion;
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    implementation 'android.arch.persistence.room:rxjava2:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
 
     //Support
-    compile 'com.android.support:appcompat-v7:' + rootProject.supportLibVersion;
-    compile 'com.android.support:design:' + rootProject.supportLibVersion;
-    compile 'com.android.support:recyclerview-v7:' + rootProject.supportLibVersion;
-    compile 'com.android.support:cardview-v7:' + rootProject.supportLibVersion;
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 
     //Picasso
-    compile 'com.squareup.picasso:picasso:' + rootProject.picassoVersion;
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 
     //MaterialSearchView
-    compile 'com.miguelcatalan:materialsearchview:' + rootProject.materialSearchViewVersion;
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
 
     //Circle ImageView
-    compile 'de.hdodenhof:circleimageview:' + rootProject.circleImageViewVersion;
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
 
     //Transitions
-    compile 'com.andkulikov:transitionseverywhere:' + rootProject.transitionsEverywhereVersion;
+    implementation 'com.andkulikov:transitionseverywhere:1.7.0'
 
     //Blurry imageviews
-    compile 'jp.wasabeef:blurry:' + rootProject.blurryVersion;
+    implementation 'jp.wasabeef:blurry:2.1.1'
 
     //Betterpickers
-    compile 'com.code-troopers.betterpickers:library:' + rootProject.betterpickersVersion;
+    implementation 'com.code-troopers.betterpickers:library:3.1.0'
 
     //ImageCropper
-    compile 'com.theartofdev.edmodo:android-image-cropper:' + rootProject.imageCropperVersion;
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.4.0'
 
 }
