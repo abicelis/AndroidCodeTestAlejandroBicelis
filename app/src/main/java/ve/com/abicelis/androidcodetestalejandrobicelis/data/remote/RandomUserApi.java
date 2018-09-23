@@ -3,7 +3,6 @@ package ve.com.abicelis.androidcodetestalejandrobicelis.data.remote;
 import io.reactivex.Single;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
-import ve.com.abicelis.androidcodetestalejandrobicelis.application.Constants;
 import ve.com.abicelis.androidcodetestalejandrobicelis.data.model.randomuserapi.RandomApiResponse;
 
 /**

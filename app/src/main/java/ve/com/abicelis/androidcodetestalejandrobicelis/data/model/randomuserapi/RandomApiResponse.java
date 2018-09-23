@@ -17,7 +17,7 @@ public class RandomApiResponse {
         private RandomApiName name;
         private RandomApiLocation location;
         private String email;
-        private String dob;
+        private RandomApiDob dob;
         private String phone;
         private String cell;
         private RandomApiPicture picture;
@@ -25,7 +25,7 @@ public class RandomApiResponse {
         public RandomApiName getName() {return name;}
         public RandomApiLocation getLocation() {return location;}
         public String getEmail() {return email;}
-        public String getDob() {return dob;}
+        public RandomApiDob getDob() {return dob;}
         public String getPhone() {return phone;}
         public String getCell() {return cell;}
         public RandomApiPicture getPicture() {return picture;}
@@ -52,6 +52,14 @@ public class RandomApiResponse {
         public String getCity() {return city;}
         public String getState() {return state;}
         public String getPostCode() {return postcode;}
+    }
+
+    public class RandomApiDob {
+        private String date;
+        private String age;
+
+        public String getDate() {return date;}
+        public String getAge() {return age;}
     }
 
     public class RandomApiPicture {

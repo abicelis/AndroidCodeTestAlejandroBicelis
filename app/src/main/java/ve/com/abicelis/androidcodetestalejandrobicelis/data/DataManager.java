@@ -128,8 +128,8 @@ public class DataManager {
 
                         Calendar dateOfBirth = Calendar.getInstance();
                         try {
-                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-                            dateOfBirth.setTime(sdf.parse(r.getDob()));
+                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault());
+                            dateOfBirth.setTime(sdf.parse(r.getDob().getDate()));
                         } catch (ParseException e) { /*Just skip the thing*/ }
 
                         byte[] image = null;
