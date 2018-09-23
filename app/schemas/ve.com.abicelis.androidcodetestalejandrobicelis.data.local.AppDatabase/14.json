@@ -1,0 +1,287 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 14,
+    "identityHash": "ec5b196fefc364a568ecaed3846c136b",
+    "entities": [
+      {
+        "tableName": "contact",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`contact_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `first_name` TEXT, `last_name` TEXT, `date_of_birth` TEXT, `image` BLOB)",
+        "fields": [
+          {
+            "fieldPath": "mId",
+            "columnName": "contact_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mFirstName",
+            "columnName": "first_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mLastName",
+            "columnName": "last_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mDateOfBirth",
+            "columnName": "date_of_birth",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mImage",
+            "columnName": "image",
+            "affinity": "BLOB",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "contact_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_contact_first_name",
+            "unique": false,
+            "columnNames": [
+              "first_name"
+            ],
+            "createSql": "CREATE  INDEX `index_contact_first_name` ON `${TABLE_NAME}` (`first_name`)"
+          },
+          {
+            "name": "index_contact_last_name",
+            "unique": false,
+            "columnNames": [
+              "last_name"
+            ],
+            "createSql": "CREATE  INDEX `index_contact_last_name` ON `${TABLE_NAME}` (`last_name`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "phone",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`phone_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `contact_fk` INTEGER NOT NULL, `phone` TEXT, `attachment_type` TEXT, `phone_order` INTEGER NOT NULL, FOREIGN KEY(`contact_fk`) REFERENCES `contact`(`contact_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "mId",
+            "columnName": "phone_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mContactId",
+            "columnName": "contact_fk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mPhone",
+            "columnName": "phone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mAttachmentType",
+            "columnName": "attachment_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mOrder",
+            "columnName": "phone_order",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "phone_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_phone_contact_fk",
+            "unique": false,
+            "columnNames": [
+              "contact_fk"
+            ],
+            "createSql": "CREATE  INDEX `index_phone_contact_fk` ON `${TABLE_NAME}` (`contact_fk`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "contact",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "contact_fk"
+            ],
+            "referencedColumns": [
+              "contact_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "email",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`email_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `contact_fk` INTEGER NOT NULL, `email` TEXT, `attachment_type` TEXT, `email_order` INTEGER NOT NULL, FOREIGN KEY(`contact_fk`) REFERENCES `contact`(`contact_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "mId",
+            "columnName": "email_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mContactId",
+            "columnName": "contact_fk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mEmail",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mAttachmentType",
+            "columnName": "attachment_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mOrder",
+            "columnName": "email_order",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "email_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_email_contact_fk",
+            "unique": false,
+            "columnNames": [
+              "contact_fk"
+            ],
+            "createSql": "CREATE  INDEX `index_email_contact_fk` ON `${TABLE_NAME}` (`contact_fk`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "contact",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "contact_fk"
+            ],
+            "referencedColumns": [
+              "contact_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "address",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`address_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `contact_fk` INTEGER NOT NULL, `street` TEXT, `city` TEXT, `country` TEXT, `postal_code` TEXT, `attachment_type` TEXT, `address_order` INTEGER NOT NULL, FOREIGN KEY(`contact_fk`) REFERENCES `contact`(`contact_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "mId",
+            "columnName": "address_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mContactId",
+            "columnName": "contact_fk",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mStreet",
+            "columnName": "street",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mCity",
+            "columnName": "city",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mCountry",
+            "columnName": "country",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mPostalCode",
+            "columnName": "postal_code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mAttachmentType",
+            "columnName": "attachment_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mOrder",
+            "columnName": "address_order",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "address_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_address_contact_fk",
+            "unique": false,
+            "columnNames": [
+              "contact_fk"
+            ],
+            "createSql": "CREATE  INDEX `index_address_contact_fk` ON `${TABLE_NAME}` (`contact_fk`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "contact",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "contact_fk"
+            ],
+            "referencedColumns": [
+              "contact_id"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"ec5b196fefc364a568ecaed3846c136b\")"
+    ]
+  }
+}
