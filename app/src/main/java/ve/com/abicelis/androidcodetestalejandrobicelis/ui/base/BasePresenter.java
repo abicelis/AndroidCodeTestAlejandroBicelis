@@ -1,5 +1,8 @@
 package ve.com.abicelis.androidcodetestalejandrobicelis.ui.base;
 
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
+
 /**
  * Created by abicelis on 9/9/2017.
  *
@@ -10,6 +13,10 @@ package ve.com.abicelis.androidcodetestalejandrobicelis.ui.base;
 public class BasePresenter<T extends MvpView> implements Presenter<T> {
 
     private T mMvpView;
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();    //Used to properly dispose subscriptions on activity destruction
+
+    protected void addDisposable(Disposable d) { compositeDisposable.add(d); }
+    protected void disposeDisposables() { compositeDisposable.dispose(); }
 
     @Override
     public void attachView(T mvpView) {
@@ -19,6 +26,7 @@ public class BasePresenter<T extends MvpView> implements Presenter<T> {
     @Override
     public void detachView() {
         mMvpView = null;
+        disposeDisposables();
     }
 
     public boolean isViewAttached() {
